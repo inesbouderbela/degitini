@@ -1,0 +1,23 @@
+2025-11-30T00:31:30.668+01:00  INFO 18632 --- [backend] [restartedMain] com.digitini.BackendApplication          : Starting BackendApplication using Java 17.0.1 with PID 18632 (D:\IHM\degitini\backend\backend\target\classes started by oussama in D:\IHM\degitini\backend\backend)
+2025-11-30T00:31:30.670+01:00 DEBUG 18632 --- [backend] [restartedMain] com.digitini.BackendApplication          : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-11-30T00:31:30.671+01:00  INFO 18632 --- [backend] [restartedMain] com.digitini.BackendApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-11-30T00:31:30.735+01:00  INFO 18632 --- [backend] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-30T00:31:30.737+01:00  INFO 18632 --- [backend] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-30T00:31:31.495+01:00  WARN 18632 --- [backend] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'passwordEncoder' defined in class path resource [com/digitini/config/SecurityConfig.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=securityConfig; factoryMethodName=passwordEncoder; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/digitini/config/SecurityConfig.class]] for bean 'passwordEncoder' since there is already [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=passwordConfig; factoryMethodName=passwordEncoder; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/digitini/config/PasswordConfig.class]] bound.
+2025-11-30T00:31:31.506+01:00  INFO 18632 --- [backend] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-30T00:31:31.531+01:00 ERROR 18632 --- [backend] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'passwordEncoder', defined in class path resource [com/digitini/config/SecurityConfig.class], could not be registered. A bean with that name has already been defined in class path resource [com/digitini/config/PasswordConfig.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+

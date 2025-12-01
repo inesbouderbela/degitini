@@ -1,0 +1,30 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: digitini-backend
+  datasource:
+    url: jdbc:postgresql://localhost:5432/digitini_db
+    username: archivio_user
+    password: Yj0d2BKPDJaR
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+
+jwt:
+  secret: "digitini-secret-key-change-this-in-production-with-very-long-string"
+  access-token:
+    expiration: 3600
+  refresh-token:
+    expiration: 604800
+
+logging:
+  level:
+    com.digitini: DEBUG
